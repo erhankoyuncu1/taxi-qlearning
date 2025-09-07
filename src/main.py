@@ -5,7 +5,7 @@ from config import config
 from visualize import init_display
 from train import train_qlearning
 from test import run_test
-from utils import save_qtable  # istersen eğitim sonunda kaydet
+from utils import save_qtable
 
 def main():
     # Ortam (Gymnasium)
@@ -21,7 +21,7 @@ def main():
     train_qlearning(env, config, screen, font, q_table)
 
     # qtable kayıt
-    save_qtable(q_table, "models/qtable.npy")
+    # save_qtable(q_table, "models/qtable.npy")
 
     # Test
     run_test(env, config, screen, font, q_table)
